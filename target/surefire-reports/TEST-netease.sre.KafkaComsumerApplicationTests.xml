@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="netease.sre.KafkaComsumerApplicationTests" time="0.011" tests="1" errors="1" skipped="0" failures="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_73\jre\bin"/>
+    <property name="java.vm.version" value="25.73-b02"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="E:/ws/playgroud/Spring/kafkaComsumer/beanchMark"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="Service Pack 1"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="E:\ws\playgroud\Spring\kafkaComsumer\beanchMark"/>
+    <property name="java.runtime.version" value="1.8.0_73-b02"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_73\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\lyp\AppData\Local\Temp\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 7"/>
+    <property name="classworlds.conf" value="E:/opt/maven/apache-maven-3.3.9/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="GBK"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_73\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Users\lyp\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\lyp\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\Lenovo\Access Connections;C:\Program Files\Intel\WiFi\bin;C:\Program Files\Common Files\Intel\WirelessCommon;D:\miscs\bin;C:\Program Files\OpenVPN\bin;E:\ws\nodejs;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk1.8.0_73\bin;C:\mysoftware\gradle-2.12-bin\gradle-2.12\bin;C:\Program Files (x86)\Microsoft VS Code\bin;G;C:\Program Files\Git\opt\gradle\gradle-2.12-bin\gradle-2.12\bin;C:\Users\lyp\AppData\Roaming\npm;E:\opt\maven\apache-maven-3.3.9\bin;G:\opt\gradle\gradle-2.2-all\gradle-2.2\bin;G:\opt\zookeeper-3.3.6\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="6.1"/>
+    <property name="user.home" value="C:\Users\lyp"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="GBK"/>
+    <property name="user.name" value="lyp"/>
+    <property name="java.class.path" value="E:/opt/maven/apache-maven-3.3.9/boot/plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_73\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher package"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="zh"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_73"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_73\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_73\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_73\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_73\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_73\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_73\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_73\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_73\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_73\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="E:\opt\maven\apache-maven-3.3.9"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase name="contextLoads" classname="netease.sre.KafkaComsumerApplicationTests" time="0.011">
+    <error message="Failed to load ApplicationContext" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:47)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:283)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:173)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:803)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:784)
+	at org.springframework.boot.SpringApplication.afterRefresh(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:111)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:47)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:283)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:173)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: org.apache.kafka.common.KafkaException: Failed to construct kafka consumer
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:648)
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:542)
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:524)
+	at netease.sre.DataStreamConsumer.doTeest(DataStreamConsumer.java:31)
+	at netease.sre.KafkaComsumerApplication.run(KafkaComsumerApplication.java:14)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:800)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:784)
+	at org.springframework.boot.SpringApplication.afterRefresh(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:111)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:47)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:283)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:173)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: org.apache.kafka.common.config.ConfigException: DNS resolution failed for url in bootstrap.servers: datastream0.lt.163.org:2181
+	at org.apache.kafka.clients.ClientUtils.parseAndValidateAddresses(ClientUtils.java:48)
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:572)
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:542)
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:524)
+	at netease.sre.DataStreamConsumer.doTeest(DataStreamConsumer.java:31)
+	at netease.sre.KafkaComsumerApplication.run(KafkaComsumerApplication.java:14)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:800)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:784)
+	at org.springframework.boot.SpringApplication.afterRefresh(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:111)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:47)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:283)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:173)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+]]></error>
+    <system-out><![CDATA[16:31:26.771 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class netease.sre.KafkaComsumerApplicationTests]
+16:31:26.783 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+16:31:26.804 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+16:31:26.837 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [netease.sre.KafkaComsumerApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+16:31:26.870 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [netease.sre.KafkaComsumerApplicationTests], using SpringBootContextLoader
+16:31:26.883 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [netease.sre.KafkaComsumerApplicationTests]: class path resource [netease/sre/KafkaComsumerApplicationTests-context.xml] does not exist
+16:31:26.884 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [netease.sre.KafkaComsumerApplicationTests]: class path resource [netease/sre/KafkaComsumerApplicationTestsContext.groovy] does not exist
+16:31:26.884 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [netease.sre.KafkaComsumerApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+16:31:26.894 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [netease.sre.KafkaComsumerApplicationTests]: KafkaComsumerApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+16:31:26.959 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [netease.sre.KafkaComsumerApplicationTests]
+16:31:27.045 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+16:31:27.045 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+16:31:27.046 [main] DEBUG org.springframework.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+16:31:27.078 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved classpath location [netease/sre/] to resources [URL [file:/E:/ws/playgroud/Spring/kafkaComsumer/beanchMark/target/test-classes/netease/sre/], URL [file:/E:/ws/playgroud/Spring/kafkaComsumer/beanchMark/target/classes/netease/sre/]]
+16:31:27.079 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [E:\ws\playgroud\Spring\kafkaComsumer\beanchMark\target\test-classes\netease\sre]
+16:31:27.079 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [E:\ws\playgroud\Spring\kafkaComsumer\beanchMark\target\test-classes\netease\sre] for files matching pattern [E:/ws/playgroud/Spring/kafkaComsumer/beanchMark/target/test-classes/netease/sre/*.class]
+16:31:27.086 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [E:\ws\playgroud\Spring\kafkaComsumer\beanchMark\target\classes\netease\sre]
+16:31:27.087 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [E:\ws\playgroud\Spring\kafkaComsumer\beanchMark\target\classes\netease\sre] for files matching pattern [E:/ws/playgroud/Spring/kafkaComsumer/beanchMark/target/classes/netease/sre/*.class]
+16:31:27.088 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved location pattern [classpath*:netease/sre/*.class] to resources [file [E:\ws\playgroud\Spring\kafkaComsumer\beanchMark\target\test-classes\netease\sre\KafkaComsumerApplicationTests.class], file [E:\ws\playgroud\Spring\kafkaComsumer\beanchMark\target\classes\netease\sre\DataStreamConsumer.class], file [E:\ws\playgroud\Spring\kafkaComsumer\beanchMark\target\classes\netease\sre\KafkaComsumerApplication.class]]
+16:31:27.185 [main] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [E:\ws\playgroud\Spring\kafkaComsumer\beanchMark\target\classes\netease\sre\KafkaComsumerApplication.class]
+16:31:27.188 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration netease.sre.KafkaComsumerApplication for test class netease.sre.KafkaComsumerApplicationTests
+16:31:27.198 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [netease.sre.KafkaComsumerApplicationTests]: using defaults.
+16:31:27.204 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+16:31:27.228 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Could not instantiate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
+16:31:27.230 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+16:31:27.232 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Could not instantiate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+16:31:27.233 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7fad8c79, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@71a794e5, org.springframework.test.context.support.DirtiesContextTestExecutionListener@76329302, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5e25a92e, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4df828d7, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@b59d31, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@62fdb4a6, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@11e21d0e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1dd02175]
+16:31:27.236 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [netease.sre.KafkaComsumerApplicationTests]
+16:31:27.237 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [netease.sre.KafkaComsumerApplicationTests]
+16:31:27.241 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class netease.sre.KafkaComsumerApplicationTests]
+16:31:27.242 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+16:31:27.242 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+16:31:27.244 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [netease.sre.KafkaComsumerApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+16:31:27.246 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [netease.sre.KafkaComsumerApplicationTests], using SpringBootContextLoader
+16:31:27.248 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [netease.sre.KafkaComsumerApplicationTests]: class path resource [netease/sre/KafkaComsumerApplicationTests-context.xml] does not exist
+16:31:27.250 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [netease.sre.KafkaComsumerApplicationTests]: class path resource [netease/sre/KafkaComsumerApplicationTestsContext.groovy] does not exist
+16:31:27.251 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [netease.sre.KafkaComsumerApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+16:31:27.251 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [netease.sre.KafkaComsumerApplicationTests]: KafkaComsumerApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+16:31:27.262 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [netease.sre.KafkaComsumerApplicationTests]
+16:31:27.264 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+16:31:27.265 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+16:31:27.265 [main] DEBUG org.springframework.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+16:31:27.265 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration netease.sre.KafkaComsumerApplication for test class netease.sre.KafkaComsumerApplicationTests
+16:31:27.270 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [netease.sre.KafkaComsumerApplicationTests]: using defaults.
+16:31:27.275 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+16:31:27.284 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Could not instantiate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
+16:31:27.284 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+16:31:27.285 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Could not instantiate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+16:31:27.286 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@429bd883, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4d49af10, org.springframework.test.context.support.DirtiesContextTestExecutionListener@279ad2e3, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@58134517, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4450d156, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4461c7e3, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@351d0846, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@77e4c80f, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@35fc6dc4]
+16:31:27.286 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [netease.sre.KafkaComsumerApplicationTests]
+16:31:27.286 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [netease.sre.KafkaComsumerApplicationTests]
+16:31:27.287 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [netease.sre.KafkaComsumerApplicationTests]
+16:31:27.287 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [netease.sre.KafkaComsumerApplicationTests]
+16:31:27.294 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@6279cee3 testClass = KafkaComsumerApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@4206a205 testClass = KafkaComsumerApplicationTests, locations = '{}', classes = '{class netease.sre.KafkaComsumerApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.SpringBootTestContextCustomizer@589838eb, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@402a079c, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@dc24521], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]]], class annotated with @DirtiesContext [false] with mode [null].
+16:31:27.295 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [netease.sre.KafkaComsumerApplicationTests]
+16:31:27.295 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [netease.sre.KafkaComsumerApplicationTests]
+16:31:27.296 [main] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@6279cee3 testClass = KafkaComsumerApplicationTests, testInstance = netease.sre.KafkaComsumerApplicationTests@61009542, testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@4206a205 testClass = KafkaComsumerApplicationTests, locations = '{}', classes = '{class netease.sre.KafkaComsumerApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.SpringBootTestContextCustomizer@589838eb, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@402a079c, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@dc24521], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]]]].
+16:31:27.342 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+16:31:27.342 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+16:31:27.342 [main] DEBUG org.springframework.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+16:31:27.344 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
+16:31:27.344 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [Inlined Test Properties] PropertySource with highest search precedence
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.4.2.RELEASE)
+
+2016-11-14 16:31:27.980  INFO 1080 --- [           main] n.sre.KafkaComsumerApplicationTests      : Starting KafkaComsumerApplicationTests on lyp-pc with PID 1080 (started by lyp in E:\ws\playgroud\Spring\kafkaComsumer\beanchMark)
+2016-11-14 16:31:27.981  INFO 1080 --- [           main] n.sre.KafkaComsumerApplicationTests      : No active profile set, falling back to default profiles: default
+2016-11-14 16:31:28.019  INFO 1080 --- [           main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@41a2befb: startup date [Mon Nov 14 16:31:28 CST 2016]; root of context hierarchy
+hello to see you
+2016-11-14 16:31:29.030  INFO 1080 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	metric.reporters = []
+	metadata.max.age.ms = 300000
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	group.id = test
+	partition.assignment.strategy = [org.apache.kafka.clients.consumer.RangeAssignor]
+	reconnect.backoff.ms = 50
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	max.partition.fetch.bytes = 1048576
+	bootstrap.servers = [datastream0.lt.163.org:2181, datastream1.lt.163.org:2181, datastream2.lt.163.org:2181/kafka_lt_online]
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	ssl.keystore.type = JKS
+	ssl.trustmanager.algorithm = PKIX
+	enable.auto.commit = false
+	ssl.key.password = null
+	fetch.max.wait.ms = 500
+	sasl.kerberos.min.time.before.relogin = 60000
+	connections.max.idle.ms = 540000
+	ssl.truststore.password = null
+	session.timeout.ms = 30000
+	metrics.num.samples = 2
+	client.id = 
+	ssl.endpoint.identification.algorithm = null
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	ssl.protocol = TLS
+	check.crcs = true
+	request.timeout.ms = 40000
+	ssl.provider = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.keystore.location = null
+	heartbeat.interval.ms = 3000
+	auto.commit.interval.ms = 1000
+	receive.buffer.bytes = 32768
+	ssl.cipher.suites = null
+	ssl.truststore.type = JKS
+	security.protocol = PLAINTEXT
+	ssl.truststore.location = null
+	ssl.keystore.password = null
+	ssl.keymanager.algorithm = SunX509
+	metrics.sample.window.ms = 30000
+	fetch.min.bytes = 1
+	send.buffer.bytes = 131072
+	auto.offset.reset = earliest
+
+2016-11-14 16:31:29.119  INFO 1080 --- [           main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2016-11-14 16:31:29.137 ERROR 1080 --- [           main] o.s.boot.SpringApplication               : Application startup failed
+
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:803) ~[spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:784) ~[spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.afterRefresh(SpringApplication.java:771) ~[spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) ~[spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:111) [spring-boot-test-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:44) [spring-boot-test-autoconfigure-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:283) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:173) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203) [surefire-booter-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155) [surefire-booter-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103) [surefire-booter-2.18.1.jar:2.18.1]
+Caused by: org.apache.kafka.common.KafkaException: Failed to construct kafka consumer
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:648) ~[kafka-clients-0.9.0.1.jar:na]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:542) ~[kafka-clients-0.9.0.1.jar:na]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:524) ~[kafka-clients-0.9.0.1.jar:na]
+	at netease.sre.DataStreamConsumer.doTeest(DataStreamConsumer.java:31) ~[classes/:na]
+	at netease.sre.KafkaComsumerApplication.run(KafkaComsumerApplication.java:14) ~[classes/:na]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:800) ~[spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	... 33 common frames omitted
+Caused by: org.apache.kafka.common.config.ConfigException: DNS resolution failed for url in bootstrap.servers: datastream0.lt.163.org:2181
+	at org.apache.kafka.clients.ClientUtils.parseAndValidateAddresses(ClientUtils.java:48) ~[kafka-clients-0.9.0.1.jar:na]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:572) ~[kafka-clients-0.9.0.1.jar:na]
+	... 38 common frames omitted
+
+2016-11-14 16:31:29.139  INFO 1080 --- [           main] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@41a2befb: startup date [Mon Nov 14 16:31:28 CST 2016]; root of context hierarchy
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.4.2.RELEASE)
+
+2016-11-14 16:31:29.247  INFO 1080 --- [           main] n.sre.KafkaComsumerApplicationTests      : Starting KafkaComsumerApplicationTests on lyp-pc with PID 1080 (started by lyp in E:\ws\playgroud\Spring\kafkaComsumer\beanchMark)
+2016-11-14 16:31:29.247  INFO 1080 --- [           main] n.sre.KafkaComsumerApplicationTests      : No active profile set, falling back to default profiles: default
+2016-11-14 16:31:29.250  INFO 1080 --- [           main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@53bd8fca: startup date [Mon Nov 14 16:31:29 CST 2016]; root of context hierarchy
+hello to see you
+2016-11-14 16:31:29.682  INFO 1080 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	metric.reporters = []
+	metadata.max.age.ms = 300000
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	group.id = test
+	partition.assignment.strategy = [org.apache.kafka.clients.consumer.RangeAssignor]
+	reconnect.backoff.ms = 50
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	max.partition.fetch.bytes = 1048576
+	bootstrap.servers = [datastream0.lt.163.org:2181, datastream1.lt.163.org:2181, datastream2.lt.163.org:2181/kafka_lt_online]
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	ssl.keystore.type = JKS
+	ssl.trustmanager.algorithm = PKIX
+	enable.auto.commit = false
+	ssl.key.password = null
+	fetch.max.wait.ms = 500
+	sasl.kerberos.min.time.before.relogin = 60000
+	connections.max.idle.ms = 540000
+	ssl.truststore.password = null
+	session.timeout.ms = 30000
+	metrics.num.samples = 2
+	client.id = 
+	ssl.endpoint.identification.algorithm = null
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	ssl.protocol = TLS
+	check.crcs = true
+	request.timeout.ms = 40000
+	ssl.provider = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.keystore.location = null
+	heartbeat.interval.ms = 3000
+	auto.commit.interval.ms = 1000
+	receive.buffer.bytes = 32768
+	ssl.cipher.suites = null
+	ssl.truststore.type = JKS
+	security.protocol = PLAINTEXT
+	ssl.truststore.location = null
+	ssl.keystore.password = null
+	ssl.keymanager.algorithm = SunX509
+	metrics.sample.window.ms = 30000
+	fetch.min.bytes = 1
+	send.buffer.bytes = 131072
+	auto.offset.reset = earliest
+
+2016-11-14 16:31:29.684  INFO 1080 --- [           main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2016-11-14 16:31:29.691 ERROR 1080 --- [           main] o.s.boot.SpringApplication               : Application startup failed
+
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:803) ~[spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:784) ~[spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.afterRefresh(SpringApplication.java:771) ~[spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) ~[spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:111) [spring-boot-test-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:47) [spring-boot-test-autoconfigure-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:283) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:173) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203) [surefire-booter-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155) [surefire-booter-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103) [surefire-booter-2.18.1.jar:2.18.1]
+Caused by: org.apache.kafka.common.KafkaException: Failed to construct kafka consumer
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:648) ~[kafka-clients-0.9.0.1.jar:na]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:542) ~[kafka-clients-0.9.0.1.jar:na]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:524) ~[kafka-clients-0.9.0.1.jar:na]
+	at netease.sre.DataStreamConsumer.doTeest(DataStreamConsumer.java:31) ~[classes/:na]
+	at netease.sre.KafkaComsumerApplication.run(KafkaComsumerApplication.java:14) ~[classes/:na]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:800) ~[spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	... 31 common frames omitted
+Caused by: org.apache.kafka.common.config.ConfigException: DNS resolution failed for url in bootstrap.servers: datastream0.lt.163.org:2181
+	at org.apache.kafka.clients.ClientUtils.parseAndValidateAddresses(ClientUtils.java:48) ~[kafka-clients-0.9.0.1.jar:na]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:572) ~[kafka-clients-0.9.0.1.jar:na]
+	... 36 common frames omitted
+
+2016-11-14 16:31:29.698  INFO 1080 --- [           main] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@53bd8fca: startup date [Mon Nov 14 16:31:29 CST 2016]; root of context hierarchy
+2016-11-14 16:31:29.703 ERROR 1080 --- [           main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4d49af10] to prepare test instance [netease.sre.KafkaComsumerApplicationTests@61009542]
+
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83) ~[spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:47) ~[spring-boot-test-autoconfigure-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230) ~[spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191) [spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:283) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:173) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128) [surefire-junit4-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203) [surefire-booter-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155) [surefire-booter-2.18.1.jar:2.18.1]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103) [surefire-booter-2.18.1.jar:2.18.1]
+Caused by: java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:803) ~[spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:784) ~[spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.afterRefresh(SpringApplication.java:771) ~[spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) ~[spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:111) ~[spring-boot-test-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98) ~[spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116) ~[spring-test-4.3.4.RELEASE.jar:4.3.4.RELEASE]
+	... 25 common frames omitted
+Caused by: org.apache.kafka.common.KafkaException: Failed to construct kafka consumer
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:648) ~[kafka-clients-0.9.0.1.jar:na]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:542) ~[kafka-clients-0.9.0.1.jar:na]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:524) ~[kafka-clients-0.9.0.1.jar:na]
+	at netease.sre.DataStreamConsumer.doTeest(DataStreamConsumer.java:31) ~[classes/:na]
+	at netease.sre.KafkaComsumerApplication.run(KafkaComsumerApplication.java:14) ~[classes/:na]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:800) ~[spring-boot-1.4.2.RELEASE.jar:1.4.2.RELEASE]
+	... 31 common frames omitted
+Caused by: org.apache.kafka.common.config.ConfigException: DNS resolution failed for url in bootstrap.servers: datastream0.lt.163.org:2181
+	at org.apache.kafka.clients.ClientUtils.parseAndValidateAddresses(ClientUtils.java:48) ~[kafka-clients-0.9.0.1.jar:na]
+	at org.apache.kafka.clients.consumer.KafkaConsumer.<init>(KafkaConsumer.java:572) ~[kafka-clients-0.9.0.1.jar:na]
+	... 36 common frames omitted
+
+]]></system-out>
+  </testcase>
+</testsuite>
