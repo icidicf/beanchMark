@@ -4,6 +4,8 @@ import com.google.common.base.Stopwatch;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Collections;
 import java.util.Properties;
@@ -13,12 +15,13 @@ import java.util.concurrent.TimeUnit;
  * Created by lyp on 2016/11/14.
  */
 public class DataStreamConsumer {
+    private  final  static Logger logger = LoggerFactory.getLogger(DataStreamConsumer.class);
     public void doTeest() {
         // Kafka-0.9 消费者参数说明：https://kafka.apache.org/090/documentation.html#newconsumerconfigs
-
         Properties props = new Properties();
         // Kafka集群地址
         props.put("bootstrap.servers", "datastream0.lt.163.org:2181,datastream1.lt.163.org:2181,datastream2.lt.163.org:2181/kafka_lt_online");
+        //props.put("bootstrap.servers", "192.168.29.141:9092");
         // 消费组
         props.put("group.id", "test");
         // 是否自动提交Offset
@@ -38,8 +41,14 @@ public class DataStreamConsumer {
             System.out.println("Pulled " + records.count() + " records");
             System.out.println("cpu count  " + Runtime.getRuntime().availableProcessors());
 
+            logger.info("info Pulled " + records.count() + " records");
+            logger.info("info cpu count  " + Runtime.getRuntime().availableProcessors());
+
             for (ConsumerRecord<String, String> record: records) {
                 System.out.println("offset = " + record.offset() + ", key=" + record.key() + ", value = " +
+                        record.value() + ", topic = " + record.topic() + ",partition = " + record.partition( ));
+
+                logger.info("info offset = " + record.offset() + ", key=" + record.key() + ", value = " +
                         record.value() + ", topic = " + record.topic() + ",partition = " + record.partition( ));
             }
         }
@@ -47,5 +56,6 @@ public class DataStreamConsumer {
 
     public void doPrint() {
         System.out.println("hello to see you");
+        logger.info("from info");
     }
 }
